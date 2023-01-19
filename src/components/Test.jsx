@@ -14,7 +14,7 @@ const Test = () => {
 
     // *Guardar nombre y id de empleado
     const [nombre, setNombre] = useState('');
-    const [id, setId] = useState('');
+    const [generacion, setGeneracion] = useState('');
 
     // *Variables que escuchan el valor del radioButton
     const [respuesta1, setRespuesta1] = useState('');
@@ -96,7 +96,7 @@ const Test = () => {
         // *Crear array para verificar respuestas
         const arrayRespuestas =[
             nombre,
-            id,
+            generacion,
             respuesta1,
             respuesta2,
             respuesta3,
@@ -184,7 +184,7 @@ const Test = () => {
         try {
             const datos = {
                 empleado: nombre,
-                idEmpleado: id,
+                generacion: generacion,
                 puntos: totalPuntos,
                 tipo: infoAsignada.tipo
             }
@@ -258,7 +258,7 @@ const Test = () => {
                                 id="id"
                                 type="text"
                                 placeholder="Ingresa tu generación"
-                                onChange={e=>setId(e.target.value)} 
+                                onChange={e=>setGeneracion(e.target.value)} 
                             />
                         </div>
                         
